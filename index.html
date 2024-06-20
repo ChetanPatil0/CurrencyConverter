@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Currency Converter</title>
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-indigo-600 ">
+    <main class="bg-white p-10 w-[45vh] rounded m-auto mt-60">
+        <h1 class="text-[23px]  font-bold uppercase">Currency Converter</h1>
+        <form class="text-md grid ">
+            <label for="amount">Enter Amount</label>
+            <input class="border border-gray-500 px-2 " type="number" value="1" id="amount" onchange="currencyData()">
+            <div class="flex justify-between mt-5 mb-5">
+                <div class="right border border-gray-500 p-1 hover:border-indigo-600 rounded">
+                    <label for="from">From</label>
+                    <select class="" name="CurrencyFrom" id="CurrencyFrom" onchange="currencyData()" >
+                        <option value="USD" selected>USD</option>
+                    </select>
+                </div>
+                <div class="left border border-gray-500 p-1 hover:border-indigo-600 rounded">
+                    <label for="to">To</label>
+                    <select name="CurrencyTo" id="CurrencyTo" onchange="currencyData()">
+                        <option value="INR" selected>INR</option>
+                    </select><br>
+                </div>
+            </div>
+        </form>
+        <h3 class="bg-gray-950 rounded font-bold text-slate-100 text-center hover:bg-indigo-600" onclick="currencyData()">Click</h3>
+                    <h1 class="font-bold text-gray-800 mt-5 text-center" id="totalval">00000</h1>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
